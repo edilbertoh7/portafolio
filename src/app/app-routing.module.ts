@@ -9,18 +9,18 @@ const app_routes: Routes = [
 
     { path: 'home', component: PortafolioComponent},
     { path: 'about', component: AboutComponent},
-    { path: 'item', component: ItemComponent},
+    { path: 'item/:id', component: ItemComponent},
     { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 
 @NgModule({
 	imports: [
-        RouterModule.forRoot( app_routes, {useHash: true} )/*useHash: se utiliza para que angular 
+        RouterModule.forRoot( app_routes, {useHash: true} )/*useHash: se utiliza para que angular
         coloque un hash # en nuestras rutas*/
     ],
     exports: [
         RouterModule
     ]
-	
+
 })
 export class AppRoutingModule{ }
