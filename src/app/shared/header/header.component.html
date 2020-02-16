@@ -13,22 +13,31 @@
       </label>
       <div class="ae-container-fluid rk-topbar">
         <h1 class="rk-logo"><a routerLink="">{{_servicio.info.titulo}}</a></h1>
-        <nav class="rk-navigation">
+        <div class="rk-centrar">
+        <div class="rk-search">
+          <input type="text"
+          (keyup.enter)="buscarProducto( txtBuscar.value)"
+          placeholder="Buscar..."
+           id="urku-search"
+            class="rk-search-field"
+            #txtBuscar>
+          <label for="urku-search">
+            <svg>
+              <use xlink:href="assets/img/symbols.svg#icon-search"></use>
+            </svg>
+          </label>
+        </div>
+      </div>
+        <nav class="rk-centrar">
           <ul class="rk-menu">
+            <!--  -->
+            <!--  -->
             <!--routerLinkActive="active" se uriliza para que sombree un poco el enlace de la vista en la que me encuentro  -->
             <li routerLinkActive="active" class="rk-menu__item"><a routerLink="home" class="rk-menu__link">Home</a>
             </li>
             <li routerLinkActive="active" class="rk-menu__item"><a routerLink="about" class="rk-menu__link">about</a>
             </li>
           </ul>
-          <form class="rk-search">
-            <input type="text" placeholder="Search" id="urku-search" class="rk-search-field">
-            <label for="urku-search">
-              <svg>
-                <use xlink:href="assets/img/symbols.svg#icon-search"></use>
-              </svg>
-            </label>
-          </form>
         </nav>
       </div>
     </header>
